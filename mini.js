@@ -4,8 +4,8 @@ let started = false;
 let level = 0;
 let btns=["yellow","red","purple","green"];
 let h2 = document.querySelector("h2");
-
-document.addEventListener("keypress", function (e) {
+let isMobile=/Mobi|Anroid/i.test(navigator.userAgent);
+document.addEventListener(isMobile?"click":"keypress", function (e) {
     if (started == false) {
         console.log("game started");
         started = true;
@@ -14,6 +14,9 @@ document.addEventListener("keypress", function (e) {
     }
 
 })
+
+
+
 function btnFlash(btn) {
     btn.classList.add("flash");
     setTimeout(function(){
