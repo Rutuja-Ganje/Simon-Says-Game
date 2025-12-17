@@ -70,7 +70,11 @@ function checkSqc(idx) {
     } else {
         if (/Mobi|Android/i.test(navigator.userAgent)) {
             h2.innerText = "Game Over! Tap anywhere to restart";
-           reset();
+             document.querySelector("body").style.backgroundColor = "red";
+            setTimeout(() => {
+                document.querySelector("body").style.backgroundColor = "white";
+            }, 150);
+            reset();
         } else {
             h2.innerText = "Game Over! Press any key to restart";
             document.querySelector("body").style.backgroundColor = "red";
