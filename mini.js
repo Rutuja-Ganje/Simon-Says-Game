@@ -61,16 +61,18 @@ function checkSqc(idx) {
     } else {
         if (/Mobi|Android/i.test(navigator.userAgent)) {
             h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br> Tap anywhere to restart`;
+            reset();
         } else {
             h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br> Press any key to restart`;
+            reset();
         }
 
         // h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
-        // document.querySelector("body").style.backgroundColor="red";
-        // setTimeout(() => {
-        //     document.querySelector("body").style.backgroundColor="white";
+       // document.querySelector("body").style.backgroundColor="red";
+     // setTimeout(() => {
+      //     document.querySelector("body").style.backgroundColor="white";
         // }, 150);
-        reset();
+        
     }
 }
 
