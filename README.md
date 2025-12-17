@@ -20,3 +20,5 @@ A fun memory game where players repeat an increasing sequence of colors. Built u
 - HTML  
 - CSS  
 - JavaScript
+  
+Play Live: https://rutuja-ganje.github.io/Simon-Says-Game/
