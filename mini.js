@@ -65,8 +65,7 @@ function checkSqc(idx) {
         //  else {
     //         h2.innerText = "Game Over! Press any key to restart";
     //     }
-
-        h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
+    // h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(() => {
         document.querySelector("body").style.backgroundColor="white";
@@ -92,6 +91,7 @@ for (btn of allBtns) {
     btn.addEventListener("click", btnPress);
 }
 function reset() {
+    h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
     started = false;
     gameSqc = [];
     userSqc = [];
