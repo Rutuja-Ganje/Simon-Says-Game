@@ -69,7 +69,7 @@ function checkSqc(idx) {
         } else {
             h2.innerText = "Game Over! Press any key to restart";
         }
-        reset();
+        // reset();
     }
 }
 
