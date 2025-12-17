@@ -50,7 +50,7 @@ function levelUp() {
     btnFlash(randbtn);
 }
 
-function checkSqc(idx) {
+async function checkSqc(idx) {
     console.log(level);
 
     if (userSqc[idx] == gameSqc[idx]) {
@@ -59,18 +59,23 @@ function checkSqc(idx) {
         }
 
     } else {
-       if (/Mobi|Android/i.test(navigator.userAgent)) {
-            h2.innerHTML =`Game Over!Your Score was <b>${level}</b> Tap anywhere to restart`;
-             reset();
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br> Tap anywhere to restart`;
+
+            // Add a one-time click listener for restart
+            document.addEventListener("click", function handler() {
+                reset(); // restart game
+                document.removeEventListener("click", handler); // remove listener after first tap
+            });
         }
-        else{
-        h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
-        document.querySelector("body").style.backgroundColor="red";
-        setTimeout(() => {
-        document.querySelector("body").style.backgroundColor="white";
-        }, 150);
-        reset();
-    }
+        else {
+            h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
+            document.querySelector("body").style.backgroundColor = "red";
+            setTimeout(() => {
+                document.querySelector("body").style.backgroundColor = "white";
+            }, 150);
+            reset();
+        }
     }
 }
 
