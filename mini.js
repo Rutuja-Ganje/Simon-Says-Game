@@ -4,15 +4,7 @@ let started = false;
 let level = 0;
 let btns=["yellow","red","purple","green"];
 let h2 = document.querySelector("h2");
-document.addEventListener("click", function (e) {
-    if (started == false) {
-        console.log("game started");
-        started = true;
 
-        levelUp();
-    }
-
-})
 document.addEventListener("keypress", function (e) {
     if (started == false) {
         console.log("game started");
@@ -57,7 +49,7 @@ function checkSqc(idx){
        }
         
     }else{
-        h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key or Touch anywhere to start`;
+        h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(() => {
             document.querySelector("body").style.backgroundColor="white";
