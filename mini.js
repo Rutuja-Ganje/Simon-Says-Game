@@ -4,18 +4,34 @@ let started = false;
 let level = 0;
 let btns=["yellow","red","purple","green"];
 let h2 = document.querySelector("h2");
-let isMobile=/Mobi|Anroid/i.test(navigator.userAgent);
-document.addEventListener(isMobile?"click":"keypress", function (e) {
-    if (started == false) {
-        console.log("game started");
-        started = true;
+// let isMobile=/Mobi|Anroid/i.test(navigator.userAgent);
+// document.addEventListener("keypress", function (e) {
+//     if (started == false) {
+//         console.log("game started");
+//         started = true;
 
-        levelUp();
+//         levelUp();
+//     }
+
+// })
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  // Mobile: tap anywhere
+  document.addEventListener("click", function () {
+    if (!started) {
+      started = true;
+      levelUp();
     }
-
-})
-
-
+  });
+} else {
+  // Desktop: press any key
+  document.addEventListener("keypress", function () {
+    if (!started) {
+      started = true;
+      levelUp();
+    }
+  });
+}
 
 function btnFlash(btn) {
     btn.classList.add("flash");
