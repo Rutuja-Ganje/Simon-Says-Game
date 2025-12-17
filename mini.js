@@ -68,7 +68,7 @@ function checkSqc(idx) {
         h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(() => {
-            document.querySelector("body").style.backgroundColor="white";
+        document.querySelector("body").style.backgroundColor="white";
         }, 150);
         reset()
         
