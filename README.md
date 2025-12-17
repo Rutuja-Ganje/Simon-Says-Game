@@ -14,7 +14,7 @@ A fun memory game where players repeat an increasing sequence of colors. Built u
 - Watch the color sequence carefully
 - Tap the same colors in the correct order
 - Each correct round increases the level
-- If you tap a wrong color, the game restarts from **Level 1**
+- If you tap a wrong color,message appear, and the game restarts from **Level 1**
 
 ## Technologies
 - HTML  
