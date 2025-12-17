@@ -60,18 +60,17 @@ function checkSqc(idx) {
 
     } else {
        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            h2.innerText = "Game Over!Your Score was <b>${level}</b> Tap anywhere to restart";
+            h2.innerHTML =`Game Over!Your Score was <b>${level}</b> Tap anywhere to restart`;
+             reset();
         }
-        //  else {
-    //         h2.innerText = "Game Over! Press any key to restart";
-    //     }
-    // h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
+        else{
+        h2.innerHTML=`Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(() => {
         document.querySelector("body").style.backgroundColor="white";
         }, 150);
-        reset()
-        
+        reset();
+    }
     }
 }
 
@@ -91,7 +90,6 @@ for (btn of allBtns) {
     btn.addEventListener("click", btnPress);
 }
 function reset() {
-    h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br>Press any key  to start`;
     started = false;
     gameSqc = [];
     userSqc = [];
