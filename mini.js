@@ -59,9 +59,10 @@ function checkSqc(idx) {
         }
 
     } else {
-    //    if (/Mobi|Android/i.test(navigator.userAgent)) {
-    //         h2.innerText = "Game Over! Tap anywhere to restart";
-    //     } else {
+       if (/Mobi|Android/i.test(navigator.userAgent)) {
+            h2.innerText = "Game Over!Your Score was <b>${level}</b> Tap anywhere to restart";
+        }
+        //  else {
     //         h2.innerText = "Game Over! Press any key to restart";
     //     }
 
