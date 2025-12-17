@@ -2,10 +2,18 @@ let gameSqc = [];
 let userSqc = [];
 let started = false;
 let level = 0;
-let isMobile=/Mobi|Android/i.test(navigator.userAgent);
 let btns=["yellow","red","purple","green"];
 let h2 = document.querySelector("h2");
-document.addEventListener(isMobile?"click":"keypress", function (e) {
+document.addEventListener("click", function (e) {
+    if (started == false) {
+        console.log("game started");
+        started = true;
+
+        levelUp();
+    }
+
+})
+document.addEventListener("keypress", function (e) {
     if (started == false) {
         console.log("game started");
         started = true;
