@@ -74,7 +74,7 @@ function checkSqc(idx) {
             setTimeout(() => {
                 document.querySelector("body").style.backgroundColor = "white";
             }, 150);
-            reset();
+            // reset();
         } else {
             h2.innerText = "Game Over! Press any key to restart";
             document.querySelector("body").style.backgroundColor = "red";
